@@ -4,11 +4,13 @@
     <div class="content">
       <router-view />
     </div>
+    <Footer />
   </div>
 </template>
 
 <script setup>
 import { ref } from "vue";
+import Footer from "./components/Footer.vue";
 </script>
 
 <style lang="scss">
