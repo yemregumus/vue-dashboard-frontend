@@ -1,5 +1,7 @@
 <template>
   <div class="app">
+    <!-- Navbar -->
+    <Navbar :isAuthenticated="isAuthenticated" @logout="logout" />
     <!-- Content -->
     <div class="content">
       <router-view />
@@ -11,6 +13,7 @@
 <script setup>
 import { ref } from "vue";
 import Footer from "./components/Footer.vue";
+import Navbar from "./components/Navbar.vue";
 </script>
 
 <style lang="scss">
@@ -58,6 +61,6 @@ button {
   flex-grow: 1;
   padding: 2rem;
   background: var(--light);
-  overflow: auto; /* Enable scrolling */
+  overflow: auto;
 }
 </style>
