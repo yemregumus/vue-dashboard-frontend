@@ -3,6 +3,7 @@ import Landing from "../components/LandingPage.vue";
 import Login from "../components/Login.vue";
 import Register from "../components/Register.vue";
 import Home from "../components/Home.vue";
+import Dashboard from "../components/Dashboard.vue";
 
 const routes = [
   {
@@ -20,6 +21,10 @@ const routes = [
   {
     path: "/home",
     component: Home,
+  },
+  {
+    path: "/dashboard",
+    component: Dashboard,
   },
 ];
 
