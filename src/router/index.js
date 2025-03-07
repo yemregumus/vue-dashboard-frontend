@@ -26,36 +26,52 @@ const routes = [
   {
     path: "/home",
     component: Home,
+    meta: { requiresAuth: true },
   },
   {
     path: "/dashboard",
     component: Dashboard,
+    meta: { requiresAuth: true },
   },
   {
     path: "/activeCustomers",
     component: ActiveCustomers,
+    meta: { requiresAuth: true },
   },
   {
     path: "/blocksAdded",
     component: BlocksAdded,
+    meta: { requiresAuth: true },
   },
   {
     path: "/countriesServed",
     component: CountriesServed,
+    meta: { requiresAuth: true },
   },
   {
     path: "/nodesOnline",
     component: NodesOnline,
+    meta: { requiresAuth: true },
   },
   {
     path: "/transactions",
     component: Transactions,
+    meta: { requiresAuth: true },
   },
 ];
 
 const router = createRouter({
   history: createWebHistory(),
   routes,
+});
+
+router.beforeEach((to, from, next) => {
+  const isAuthenticated = !!localStorage.getItem("token");
+  if (to.matched.some((record) => record.meta.requiresAuth) && !isAuthenticated) {
+    next("/login");
+  } else {
+    next();
+  }
 });
 
 export default router;
