@@ -8,6 +8,7 @@ import ActiveCustomers from "../views/ActiveCustomers.vue";
 import BlocksAdded from "../views/BlocksAdded.vue";
 import CountriesServed from "../views/CountriesServed.vue";
 import NodesOnline from "../views/NodesOnline.vue";
+import Transactions from "../views/Transactions.vue";
 
 const routes = [
   {
@@ -45,6 +46,10 @@ const routes = [
   {
     path: "/nodesOnline",
     component: NodesOnline,
+  },
+  {
+    path: "/transactions",
+    component: Transactions,
   },
 ];
 
