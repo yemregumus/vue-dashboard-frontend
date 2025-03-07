@@ -74,8 +74,8 @@ aside {
   color: var(--light);
   width: calc(2rem + 32px);
   overflow: hidden;
-  min-height: 100vh;
-  height: 100vh; /* Ensure it takes the full height */
+
+  height: 90vh;
   padding: 1rem;
   transition: width 0.3s ease-in-out;
 

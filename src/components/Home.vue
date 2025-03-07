@@ -35,7 +35,7 @@
   align-items: center;
   text-align: center;
   padding: 2rem;
-  min-height: 100vh;
+  max-height: 60rem;
 }
 
 .hero {
