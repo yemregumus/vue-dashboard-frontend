@@ -2,18 +2,34 @@
   <div class="app">
     <!-- Navbar -->
     <Navbar :isAuthenticated="isAuthenticated" @logout="logout" />
-    <!-- Content -->
-    <div class="content">
-      <router-view />
+    <div class="main-content">
+      <!-- Sidebar -->
+      <Sidebar v-if="isAuthenticated" />
+      <!-- Content -->
+      <div class="content">
+        <router-view @login="login" />
+      </div>
     </div>
+    <!-- Footer -->
     <Footer />
   </div>
 </template>
 
 <script setup>
 import { ref } from "vue";
-import Footer from "./components/Footer.vue";
 import Navbar from "./components/Navbar.vue";
+import Sidebar from "./components/Sidebar.vue";
+import Footer from "./components/Footer.vue";
+const isAuthenticated = ref(false);
+
+const login = () => {
+  isAuthenticated.value = true;
+};
+
+const logout = () => {
+  localStorage.removeItem("token");
+  isAuthenticated.value = false;
+};
 </script>
 
 <style lang="scss">
