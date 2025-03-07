@@ -5,7 +5,7 @@ import Register from "../components/Register.vue";
 import Home from "../components/Home.vue";
 import Dashboard from "../components/Dashboard.vue";
 import ActiveCustomers from "../views/ActiveCustomers.vue";
-
+import BlocksAdded from "../views/BlocksAdded.vue";
 const routes = [
   {
     path: "/",
@@ -30,6 +30,10 @@ const routes = [
   {
     path: "/activeCustomers",
     component: ActiveCustomers,
+  },
+  {
+    path: "/blocksAdded",
+    component: BlocksAdded,
   },
 ];
 
