@@ -7,6 +7,7 @@ import Dashboard from "../components/Dashboard.vue";
 import ActiveCustomers from "../views/ActiveCustomers.vue";
 import BlocksAdded from "../views/BlocksAdded.vue";
 import CountriesServed from "../views/CountriesServed.vue";
+import NodesOnline from "../views/NodesOnline.vue";
 
 const routes = [
   {
@@ -40,6 +41,10 @@ const routes = [
   {
     path: "/countriesServed",
     component: CountriesServed,
+  },
+  {
+    path: "/nodesOnline",
+    component: NodesOnline,
   },
 ];
 
