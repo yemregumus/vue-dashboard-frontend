@@ -35,12 +35,9 @@ const login = async () => {
       password: password.value,
     });
 
-    alert(response.data.message);
-    // Save the token to localStorage or Vuex store
     localStorage.setItem("token", response.data.token);
-    // Emit login event
+
     emit("login");
-    // Redirect to the dashboard
     router.push("/home");
   } catch (error) {
     alert(error.response.data.message);
